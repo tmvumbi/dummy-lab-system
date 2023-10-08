@@ -9,7 +9,29 @@ A simple Node.js and Express application that provides basic functionality for m
 
 ## Installation & Setup
 
-1. **Clone the repository:**
+### Using Docker:
+
+1. **Clone the repository and navigate to it:**
+    ```bash
+    git clone https://github.com/tmvumbi/dummy-lab-system
+    cd dummy-lab-system
+    ```
+
+2. **Build the Docker image:**
+    ```bash
+    docker build -t dummy-lab-system .
+    ```
+
+3. **Run the application in a Docker container:**
+    ```bash
+    docker run -p 7001:7001 dummy-lab-system
+    ```
+
+After running the container, open your web browser and navigate to `http://localhost:7001` to see the list of lab orders.
+
+### Without Docker:
+
+1. **Clone the repository and navigate to it:**
     ```bash
     git clone https://github.com/tmvumbi/dummy-lab-system.git
     cd dummy-lab-system
@@ -31,7 +53,7 @@ After running the application, you can open your web browser and navigate to `ht
 
 ### Submitting a Lab Order
 
-To submit a new lab order, send a POST request to `http://localhost:7001/submit-order` with a JSON body containing the lab order details. For example:
+To submit a new lab order, send a POST request to `http://localhost:7001/submit-order` (or `http://localhost:7001/submit-order` if not using Docker) with a JSON body containing the lab order details. For example:
 
 ```json
 {
