@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Lab System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <img src="/views/bunny.jpeg" alt="Bunny" width="150">
+    <h2>Lab Orders</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Test Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% labOrders.forEach(order => { %>
+                <tr>
+                    <td><%= order.name %></td>
+                    <td><%= order.testType %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
